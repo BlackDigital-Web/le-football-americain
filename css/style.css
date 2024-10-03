@@ -1,0 +1,219 @@
+/*Container*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    width: 100%;
+    height: 100vh;
+}
+
+/*header styling*/
+header{
+    background-image: url(../images/running-back-6922908_1280.jpg);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+
+    padding: 1rem;
+    font-style: italic;
+    font-family: "Sixtyfour Convergence", sans-serif;
+
+    color: #fff;
+}
+
+header img{
+    width: 6.5rem;
+    height: 6.52rem;
+}
+
+aside{
+    color: #fff;
+    background-color: #1e1e1ec4;
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 2rem;
+    padding-left: 5rem;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    line-height: 1.5rem;
+    font-style: italic;
+    height: 30rem;
+
+    transition:0.5s;
+}
+
+aside:hover{
+    background-color: #f6f4f4e7;
+    color: #1E1E1E;
+    line-height: 2rem;
+    border-radius: 20px;
+    height: 35rem;
+    border: dashed #bababa;
+}
+
+nav ul{
+    color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #1E1E1E;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    transition: 0.5s;
+    
+
+    
+}
+
+nav a:hover{
+    color: #FF4943;
+    font-size: 1.25rem;
+}
+
+
+/*main styling*/
+
+main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #1E1E1E;
+
+    
+}
+section{
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #e3e2e2;
+    border: dashed #bababa;
+
+    transition: 0.5s;
+}
+
+section:hover{
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+.section-origines, .section-impact{
+    grid-column: span 4;
+}
+
+.title{
+    grid-column: span 4;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+h2{
+    font-size: 2rem;
+    background-color: #bababa;
+    
+}
+
+h3{
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: bold;
+
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: solid #bababa;
+
+    color: #434141;
+}
+
+h4{
+    font-size: 2rem;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 700px){
+    .container{
+        grid-template-columns: 1fr;
+        position: relative;
+        height: 100%;
+        padding-bottom: 2rem;
+    }
+    .section-regles, .section-culture, .section-jeu {
+        grid-column: span 4;
+    }
+
+    header{
+        background-size:cover;
+        background-position: center;
+    }
+
+    aside{
+        height:15rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.75rem;
+    }
+    aside:hover{
+        background-color: #f6f4f4e7;
+        color: #1E1E1E;
+        height: 20rem;
+        border-radius: 20px;
+        padding: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    nav{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1300px){
+    .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .section-regles, .section-culture, .section-jeu {
+        grid-column: span 4;
+    }
+
+    aside{
+        display: flex;
+        align-items: center;
+    }
+  
+    
+}
